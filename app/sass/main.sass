@@ -1,0 +1,451 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #a3a3a3
+	opacity: 1
+
+*:-moz-placeholder
+	color: #a3a3a3
+	opacity: 1
+
+*::-moz-placeholder
+	color: #a3a3a3
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #a3a3a3
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+h1
+	color: #fff
+	font-size: 45px
+	display: inline-block
+	margin-right: 47px
+
+h2
+	font-size: 30px
+	color: #626262
+
+h3
+	font-size: 30px
+	color: #626262
+	margin: 0 0 20px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.header__top-line
+	padding: 46px 0
+.header__top-line__logo-wrapper
+	img
+		margin: -16px 20px 0 0
+	span
+		font-family: "PTSansBold", sans-serif
+		font-size: 35px
+		text-transform: uppercase
+.header__top-line__top-nav
+	ul
+		list-style-type: none
+		padding: 0
+		li
+			display: inline-block				
+			padding: 0
+			a
+				color: #626262
+				text-transform: uppercase
+				&:hover
+					color: $accent
+					text-decoration: none
+			&::after
+				content: '|'
+				margin: 20px
+			&:last-child::after
+				content: ''
+				margin: 0
+
+.header__top-line__hidden-menu
+	background-color: $bg_color
+	margin-top: 15px
+	text-align: center
+	text-transform: uppercase
+	display: none
+	ul
+		margin: 0
+		padding-left: 0
+		list-style-type: none
+		li
+			display: block
+			padding: 10px 0
+			&:hover
+				background-color: $accent
+			a
+				color: #fff
+				display: block
+				&:hover
+					text-decoration: none
+
+.toggle-mnu__wrapper
+	text-align: center
+
+//toggle-menu
+.toggle-mnu
+  display: inline-block
+  width: 28px
+  height: 28px
+  margin-top: 21px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $bg_color
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+
+.header__top-line__search
+	position: relative
+	margin-top: 15px
+
+.header__top-line__search__input
+	background-color: #f1f3f6
+	border: none
+	padding: 3px 8px
+	font-family: "PTSansItalic", sans-serif
+	font-size: 15px
+	width: 88%
+	float: right
+	color: #a3a3a3
+
+.header__top-line__search_submit
+	border: none
+	position: absolute
+	right: 8px
+	top: 3px
+	width: 20px
+	height: 24px
+	background-image: url(/img/search-icon.png)
+	background-repeat: no-repeat
+	background-size: cover
+			
+.header__content
+	background-color: $bg_color
+
+.header__content__top	
+	text-align: center
+	margin-bottom: 60px
+
+.button
+	border: none
+
+.header__content__top__button
+	background-color: $accent
+	color: #fff
+	font-size: 22px
+	padding: 10px 58px
+	border-radius: 4px
+	margin-top: 15px
+	display: inline-block
+
+.header__content__main
+	position: relative
+	height: 335px
+
+.macbook__monitor
+	position: absolute
+	background: linear-gradient(to bottom, #fff, #DFDFDF)
+	height: 346px
+	width: 523px
+	border-radius: 20px
+	display: block
+	text-align: center
+	top: 0
+	left: 33%
+	&::after
+		content: ''
+		background-image: url(/img/keypad.png)
+		background-repeat: no-repeat
+		background-position: center bottom
+		position: absolute
+		bottom: -20px
+		left: -95px
+		height: 100%
+		width: 714px
+
+.macbook__monitor__screen
+	background-color: #F1AB23
+	width: 483px
+	height: 302px
+	display: inline-block
+	margin-top: 23px
+	font-family: "PTSansBold", sans-serif
+	font-size: 45px
+	span
+		display: block
+		margin-top: 15%
+
+.iphone
+	position: absolute
+	background: linear-gradient(to bottom, #fff, #DFDFDF)
+	height: 303px
+	width: 143px
+	border-radius: 20px
+	display: block
+	text-align: center
+	top: 80px
+	left: 28%
+	line-height: 1
+	box-shadow: 20px 0 50px rgba(0,0,0,0.5)
+
+.iphone__screen
+	background-color: #F1AB23
+	width: 122px
+	height: 216px
+	display: inline-block
+	font-family: "PTSansBold", sans-serif
+	margin-bottom: 9px
+	span
+		display: block
+		margin-top: 60%
+		line-height: 1.75
+
+.iphone__camera
+	background-color: #DDDDDD
+	width: 7px
+	height: 7px
+	border-radius: 100%
+	display: inline-block
+	margin-top: 10px
+	margin-bottom: 5px
+
+.iphone__speaker
+	background-color: #DDDDDD
+	width: 26px
+	height: 6px
+	border-radius: 30px
+	display: inline-block
+	margin-bottom: 14px
+
+.iphone__start-button
+	display: inline-block
+	background-color: #C8C8C8
+	border-radius: 100%
+	width: 27px
+	height: 27px
+	text-align: center
+
+.iphone__start-button__button
+	height: 11px
+	width: 11px
+	background-color: #fff
+	display: inline-block
+	margin-top: 8px
+	border-radius: 3px
+
+.s1
+	padding: 100px 0 72px
+	text-align: center
+
+.s1__item
+	p
+		margin: 0 0 32px
+		padding: 0
+		color: #2a2e39
+	a
+		color: #00aeff
+		text-transform: uppercase
+		font-size: 15px
+		font-family: "PTSansBold", sans-serif
+		&:hover
+			text-decoration: none
+			color: $accent
+
+.s1__item__icon
+	display: inline-block
+	margin-bottom: 32px
+
+.s2
+	background-color: #E2E7ED
+	padding: 55px 0 100px
+
+.s2__item
+	background-size: cover
+	height: 200px
+	transition: all .5s ease
+	position: relative
+
+.s2__item__hover
+	transition: all .5s ease
+	position: absolute
+	width: 100%
+	height: 100%
+	opacity: 0
+	top: 0
+	left: 0
+	z-index: 10
+	background-color: $accent
+	padding: 10px
+	color: #fff
+	span
+		font-family: "PTSansBold", sans-serif
+		font-size: 24px
+	&:hover
+		opacity: 1
+.s2__item__hover__preview
+	height: 40px
+	width: 70px
+	position: absolute
+	background-color: #2A8BCC
+	background-image: url(/img/works/preview.png)
+	background-repeat: no-repeat
+	background-position: center
+	bottom: 0
+	left: 0
+.s2__item__hover__link
+	height: 40px
+	width: 70px
+	position: absolute
+	background-color: #2A8BCC
+	background-image: url(/img/works/link.png)
+	background-repeat: no-repeat
+	background-position: center
+	bottom: 0
+	right: 0
+
+.s2__item_1
+	background-image: url(/img/works/1.jpg)
+
+.s2__item_2
+	background-image: url(/img/works/2.jpg)
+
+.s2__item_3
+	background-image: url(/img/works/3.jpg)
+
+.s2__item_4
+	background-image: url(/img/works/4.jpg)
+
+.s2__item_5
+	background-image: url(/img/works/5.jpg)
+
+.s2__item_6
+	background-image: url(/img/works/6.jpg)
+
+.s2__item_7
+	background-image: url(/img/works/7.jpg)
+
+.s2__item_8
+	background-image: url(/img/works/1.jpg)
+
+//magnific-popup
+.mfp-with-zoom
+  .mfp-container, &.mfp-bg
+    opacity: 0
+    transition: all 0.3s ease-out
+  &.mfp-ready
+    .mfp-container
+      opacity: 1
+    &.mfp-bg
+      opacity: 0.8
+  &.mfp-removing
+    .mfp-container, &.mfp-bg
+      opacity: 0
+
+.s3
+	padding: 34px 0 80px
+
+.s3__carousel
+	position: relative
+
+.s3__carousel__item
+	height: 52px
+	text-align: center
+	img
+		width: auto
+		height: 100%
+
+.owl-prev, .owl-next
+	position: absolute
+	font-size: 100px
+	color: #CFD4DB
+
+.owl-prev
+	top: -66px
+	left: -75px
+
+.owl-next
+	top: -66px
+	right: -75px
+
+.footer
+	background-color: $bg_color
+	padding: 40px 0 75px
+	color: #fff
+	p
+		margin: 0
+
+.footer__footer-nav
+	ul
+		margin: 0
+		li
+			a
+				color: #fff
+				text-transform: none
+
+.footer__socials
+	text-align: right
+	a
+		display: inline-block
+		margin: 0 5px
+		img
+			width: 36px
+
+
+
+
+@import "media"
